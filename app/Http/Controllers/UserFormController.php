@@ -15,7 +15,7 @@ class UserFormController extends Controller
             'name' => 'required',
         ]);
 
-        if(!is_string($request->phone)){
+        if(!is_string($request->phone)){ 
             return response()->json([
                 'status'  => 422,
                 'message' => 'Numbers should not be string'
