@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+ 
 Route::get('/',HomeComponent::class);
 
 Route::middleware(['auth:sanctum','verified'])->group(function() {
