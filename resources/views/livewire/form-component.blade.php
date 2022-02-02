@@ -68,7 +68,7 @@
         var status = this.checked;
         var value = this.value;
         
-        if (status == true){
+        if (status == true){ 
             switch(value) {
                 case 'phone':
                     $('<div/>').addClass('form-group phone')
