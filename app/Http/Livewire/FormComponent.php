@@ -9,5 +9,5 @@ class FormComponent extends Component
     public function render()
     {
         return view('livewire.form-component')->layout('layouts.base');
-    }
+    } 
 }
