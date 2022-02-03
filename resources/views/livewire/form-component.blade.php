@@ -73,7 +73,7 @@
                 case 'phone':
                     $('<div/>').addClass('form-group phone')
                     .append( $('<label for="phone"/>').text('Phone Number'))
-                    .append( $('<input type="tel" name="phone" placeholder="Eg:1234567890"/>').addClass( 'form-control' ))
+                    .append( $('<input type="tel" name="phone" pattern="[0-9]{1}[0-9]{9}" placeholder="Eg:1234567890 at most 10 digits"/>').addClass( 'form-control' ))
                     .insertAfter('#default-input');
                     break;
                 case 'dob':
