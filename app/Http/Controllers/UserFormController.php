@@ -15,20 +15,6 @@ class UserFormController extends Controller
             'name' => 'required',
         ]);
 
-        if(!is_string($request->phone)){ 
-            return response()->json([
-                'status'  => 422,
-                'message' => 'Numbers should not be string'
-            ]);
-        }
-
-        if(strlen($request->phone) > 10 || strlen($request->phone) < 10 )  {
-            return response()->json([
-                'status'  => 422,
-                'message' => 'Number format is not correct'
-            ]);
-        }
-
         UserForm::create([
             'name' => $request->name,
             'phone' => $request->phone,
