@@ -73,21 +73,21 @@
                 case 'phone':
                     $('<div/>').addClass('form-group phone')
                     .append( $('<label for="phone"/>').text('Phone Number'))
-                    .append( $('<input type="tel" name="phone" pattern="[0-9]{1}[0-9]{9}" placeholder="Eg:1234567890 at most 10 digits"/>').addClass( 'form-control' ))
+                    .append( $('<input type="tel" name="phone" required pattern="[0-9]{1}[0-9]{9}" placeholder="Eg:1234567890 at most 10 digits"/>').addClass( 'form-control' ))
                     .insertAfter('#default-input');
                     break;
                 case 'dob':
                     $('<div/>').addClass('form-group dob')
                     .append( $('<label for="Date for birth"/>').text('Date of Birth'))
-                    .append( $('<input type="date" name="dob"/>').addClass( 'form-control' ))
+                    .append( $('<input type="date" name="dob" required/>').addClass( 'form-control' ))
                     .insertAfter('#default-input');
                     break;
                 case 'gender':
                     $('<div/>').addClass('form-group gender')
                     .append($('<label for="Male"/>').text('Male').addClass('radio-inline'))
-                    .append($('<input>').prop({ type: 'radio',id: 'gender',name: 'gender',value: '1', class: 'form-control'}))
+                    .append($('<input>').prop({ type: 'radio',id: 'gender',name: 'gender',value: '1', class: 'form-control', required: 'required'}))
                     .append($('<label for="Female"/>').text('Female').addClass('radio-inline'))
-                    .append($('<input>').prop({ type: 'radio',id: 'gender',name: 'gender',value: '0', class: 'form-control'}))
+                    .append($('<input>').prop({ type: 'radio',id: 'gender',name: 'gender',value: '0', class: 'form-control', required: 'required'}))
                     .insertAfter('#default-input');
                     break;
             }
